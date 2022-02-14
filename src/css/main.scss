@@ -2,12 +2,14 @@ body{
     overflow: hidden;
 }
 
-.wrapper{
+#wrapper{
     width: 100vw;
     scroll-snap-type: y mandatory;
     overflow-y: auto;
 }
 
-.scroll-snap{
+.full-screen-section{
+    display: grid;
+    place-content: center;
     scroll-snap-align: start;
 }
