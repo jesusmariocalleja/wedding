@@ -1,0 +1,22 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "wedding website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusmariocalleja/wedding.git"
+  },
+  "author": "jesús calleja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusmariocalleja/wedding/issues"
+  },
+  "homepage": "https://github.com/jesusmariocalleja/wedding#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.22"
+  }
+}
