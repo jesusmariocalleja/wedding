@@ -4,7 +4,8 @@
   "description": "wedding website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/jesusmariocalleja/wedding#readme",
   "devDependencies": {
     "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
   }
 }

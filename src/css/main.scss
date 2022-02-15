@@ -1,5 +1,34 @@
-body{
+*{
     overflow: hidden;
+}
+
+body{
+    font-size: 14px;
+    color: #222;
+}
+
+@mixin font-licorice {
+    font-family: 'Licorice', cursive;
+}
+
+.font-licorice{
+    @include font-licorice();
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    @include font-licorice();
+}
+
+h1{ font-size: 2.5rem !important; }
+h2{ font-size: 2rem !important; }
+h3{ font-size: 1.75rem !important; }
+h4{ font-size: 1.5rem !important; }
+h5{ font-size: 1.25rem !important; }
+h6{ font-size: 1rem !important; }
+
+header, section{
+    padding: 0 1rem;
 }
 
 #wrapper{
@@ -20,6 +49,144 @@ body{
     animation: move 4s infinite cubic-bezier(0.36,-0.14, 0.7, 1.15);
 }
 
+#header{
+    display: grid;
+    place-content: center;
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    animation: show 2s;
+
+    #header-title{
+        font-size: 70px !important;
+        //font-weight: bold;
+        z-index: 1;
+    }
+
+    #header-circle-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./../../assets/img/circulo-hojas.png');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        animation: header-circle-rotate 20s infinite ease-in-out;
+        
+        @keyframes header-circle-rotate {
+            from{
+                transform: rotate(20deg);
+            }
+            33%{
+                
+                transform: rotate(30deg);
+            }
+            66%{
+                
+                transform: rotate(10deg);
+            }
+            to{
+                transform: rotate(20deg);
+            }
+        }
+    }
+
+
+    @keyframes show {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+}
+
+.section-header{
+    //width: 80vw;
+    max-width: 500px;
+    position: relative;
+
+    .section-header-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-content: center;
+
+        .section-header-title{
+            font-size: 70px !important;
+        }
+    }
+
+    .section-header-bg{
+        width: 100%;
+        max-width: 100%;
+        animation: section-header-rotate 20s infinite ease-in-out;
+    }
+}
+
+#wedding-date{
+    font-weight: bold;
+}
+
+#countdown{
+    //font-weight: bold;
+}
+
+#add-to-calendar{
+    text-align: center;
+    margin-top: 2rem;
+
+    #add-to-calendar-button{
+        display: inline-block;
+        color: white;
+        background-color: #89c6bb; //#96d9cd;
+        transition: .2s;
+
+        &:hover{
+            background-color: #78ada4;
+        }
+    }
+
+}
+
+#address{
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+#map-container{
+    margin-top: 2rem;
+
+    iframe{
+        margin: 0 auto;
+    }
+}
+        
+@keyframes section-header-rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    33%{
+        
+        transform: rotate(10deg);
+    }
+    66%{
+        
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+
 @keyframes move {
     from {
         transform : translate(0, 0);
@@ -27,15 +194,9 @@ body{
     20% {
         transform : translate(5px, -2px);
     }
-    // 30% {
-    //     transform : translate(5px, -2px);
-    // }
     40% {
         transform : translate(4px, 1px);
     }
-    // 60% {
-    //     transform : translate(-2px, -1px);
-    // }
     80% {
         transform : translate(-3px, 2px);
     }

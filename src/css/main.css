@@ -1,5 +1,47 @@
-body {
+* {
   overflow: hidden;
+}
+
+body {
+  font-size: 14px;
+  color: #222;
+}
+
+.font-licorice {
+  font-family: 'Licorice', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  font-family: 'Licorice', cursive;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+}
+
+h3 {
+  font-size: 1.75rem !important;
+}
+
+h4 {
+  font-size: 1.5rem !important;
+}
+
+h5 {
+  font-size: 1.25rem !important;
+}
+
+h6 {
+  font-size: 1rem !important;
+}
+
+header, section {
+  padding: 0 1rem;
 }
 
 #wrapper {
@@ -21,6 +63,192 @@ body {
   max-width: 90vw;
   -webkit-animation: move 4s infinite cubic-bezier(0.36, -0.14, 0.7, 1.15);
           animation: move 4s infinite cubic-bezier(0.36, -0.14, 0.7, 1.15);
+}
+
+#header {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  width: 80vw;
+  height: 80vh;
+  position: relative;
+  -webkit-animation: show 2s;
+          animation: show 2s;
+}
+
+#header #header-title {
+  font-size: 70px !important;
+  z-index: 1;
+}
+
+#header #header-circle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./../../assets/img/circulo-hojas.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-animation: header-circle-rotate 20s infinite ease-in-out;
+          animation: header-circle-rotate 20s infinite ease-in-out;
+}
+
+@-webkit-keyframes header-circle-rotate {
+  from {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  33% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  66% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@keyframes header-circle-rotate {
+  from {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  33% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  66% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  to {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-header {
+  max-width: 500px;
+  position: relative;
+}
+
+.section-header .section-header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.section-header .section-header-content .section-header-title {
+  font-size: 70px !important;
+}
+
+.section-header .section-header-bg {
+  width: 100%;
+  max-width: 100%;
+  -webkit-animation: section-header-rotate 20s infinite ease-in-out;
+          animation: section-header-rotate 20s infinite ease-in-out;
+}
+
+#wedding-date {
+  font-weight: bold;
+}
+
+#add-to-calendar {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#add-to-calendar #add-to-calendar-button {
+  display: inline-block;
+  color: white;
+  background-color: #89c6bb;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#add-to-calendar #add-to-calendar-button:hover {
+  background-color: #78ada4;
+}
+
+#address {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+#map-container {
+  margin-top: 2rem;
+}
+
+#map-container iframe {
+  margin: 0 auto;
+}
+
+@-webkit-keyframes section-header-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  66% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes section-header-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  33% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  66% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 @-webkit-keyframes move {

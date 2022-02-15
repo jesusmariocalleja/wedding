@@ -7,27 +7,116 @@
     <title>R&J</title>
     <link rel="stylesheet" href="./src/css/main.css">
     <link rel="stylesheet" href="./dist/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+    <script src="./node_modules/moment/moment.js"></script>
     <script src="./index.js"></script>
 </head>
 <body>
     <div id="wrapper">
-        <header class="full-screen-section">
-            <h1 class="text-center text-3xl text-teal-500 font-extralight">R&J</h1>
-            <img class="section-main-img" src="./assets/img/save-the-date.PNG" alt="">
-            <!-- <h1 class="text-3xl text-pink-800">¡Nos casamos!</h1> -->
+        <header 
+            class="full-screen-section">
+            <div id="header">
+                <h1 id="header-title">Raquel y Jesús</h1>
+                <p class="text-center text-gray-500">¡Nos casamos!</p>
+                <div id="header-circle-bg"></div>
+            </div>
         </header>
+        <!-- Fecha -->
         <section class="full-screen-section ">
-            <!-- <h1 class="text-3xl text-green-800">¡Si! ¡En serio!</h1> -->
-            <img class="section-main-img" src="./assets/img/la-ceremonia.PNG" alt="">
+            <div class="section-header">
+                <img 
+                    class="section-header-bg"
+                    src="./assets/img/acuarela-verde.png">
+                <div class="section-header-content">
+                    <h2 class="section-header-title">Save the Date</h2>
+                    <div class="flex align-center justify-center"
+                        style="margin-top: -0.5rem">
+                        <img 
+                            style="width: 50px; margin-right: 0.5em;"
+                            src="./assets/img/calendar.png" alt="">
+                        <h3 id="wedding-date">noviembre 2022</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div id="countdown" class="text-center"></div>
+                <div id="add-to-calendar">
+                    <a 
+                        id="add-to-calendar-button"
+                        class=" font-bold py-2 px-4 rounded-full"
+                        href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%F0%9F%92%8DBoda+Raquel+y+Jes%C3%BAs%20%F0%9F%92%96&dates=20221105T110000Z/20221105T210000Z&details=%C2%A1Gracias+por+venir!%20:)%20&location=Can%20Ribas%20de%20Montbui,%20Cam%C3%AD%20de%20Can%20Ribas,%20s/n,%2008415%20Bigues%20i%20Riells,%20Barcelona,%20Espa%C3%B1a&sf=true&output=xml"
+                        target="_blank">
+                        + Añadir a tu calendario
+                    </a>
+
+                </div>
+            </div>
         </section>
+        <!-- Lugar -->
         <section class="full-screen-section ">
-            <!-- <h1 class="text-3xl text-yellow-800">¿No te lo crees?</h1> -->
-            <img class="section-main-img" src="./assets/img/la-celebracion.PNG" alt="">
+            <div class="section-header">
+                <img 
+                    class="section-header-bg"
+                    src="./assets/img/acuarela-rosa-2.png">
+                <div class="section-header-content">
+                    <h2 class="section-header-title">Lugar de celebración</h2>
+                    <div class="flex align-center justify-center"
+                        style="margin-top: -1.5rem">
+                        <img 
+                            style="width: 70px;margin-right: -0.5em;"
+                            src="./assets/img/map-marker.svg" alt="">
+                            <h3 
+                                class="font-bold"
+                                style="margin-top: 1rem;">Can Ribas de Montbui</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content">
+                <div id="address">Camí de Can Ribas, s/n, 08415 Bigues i Riells, Barcelona</div>
+                <div id="map-container">
+                    <iframe width="300" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=can%20ribas%20de%20montbui&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+
+                <!-- <img style="margin-top: 2rem" src="./assets/img/can-ribas.jpg" alt=""> -->
+            </div>
         </section>
+        <!-- Lista de bodas -->
         <section class="full-screen-section ">
-            <!-- <h1 class="text-3xl text-purple-800">¡Pues mira!</h1> -->
+            <div class="section-header">
+                <img 
+                    class="section-header-bg"
+                    src="./assets/img/acuarela-azul.png">
+                <div class="section-header-content">
+                    <h2 class="section-header-title">Lista de Boda</h2>
+                </div>
+            </div>
+            <div class="section-content">
+                
+            </div>
+        </section>
+        <!-- Alojamiento -->
+        <section class="full-screen-section ">
+            <div class="section-header">
+                <img 
+                    class="section-header-bg"
+                    src="./assets/img/acuarela-rosa.png">
+                <div class="section-header-content">
+                    <h2 class="section-header-title">Alojamiento</h2>
+                </div>
+            </div>
+            <div class="section-content">
+                
+            </div>
+        </section>
+        <!-- <section class="full-screen-section ">
             <img class="section-main-img" src="./assets/img/lista-de-bodas.PNG" alt="">
-        </section>
+        </section> -->
+        <!-- Formulario (confirmación asistencia) -->
     </div>
+    <script src="./src/js/visuals.js"></script>
+    <script src="./src/js/countdown.js"></script>
 </body>
 </html>
