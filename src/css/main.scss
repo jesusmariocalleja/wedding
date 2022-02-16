@@ -47,12 +47,6 @@ h6{ font-size: 1rem !important; }
     scroll-snap-align: start;
 }
 
-.section-main-img{
-    width: 400px;
-    max-width: 90vw;
-    animation: move 4s infinite cubic-bezier(0.36,-0.14, 0.7, 1.15);
-}
-
 #header{
     display: grid;
     place-content: center;
@@ -67,11 +61,32 @@ h6{ font-size: 1rem !important; }
         z-index: 1;
     }
 
-    #leafs-1{
+    #leafs-1-wrapper{
         position: absolute;
-        width: 50vw;
         bottom: -50px;
-        right: -50px;    
+        right: -50px;
+        overflow: unset;
+
+        #leafs-1{ 
+            width: 50vw;
+            transform-origin: bottom right;
+            animation: header-leafs-1-move 20s infinite ease-in-out;
+        }
+
+    }
+
+    #leafs-2-wrapper{
+        position: absolute;
+        top: -100px;
+        left: -75vw;
+        overflow: unset;
+
+        #leafs-2{
+            width: 50vw;
+            transform-origin: bottom right;
+            transform: rotate(73deg);
+            animation: header-leafs-2-move 20s 2s infinite ease-in-out;
+        }
     }
 
     #header-circle-bg{
@@ -119,6 +134,7 @@ h6{ font-size: 1rem !important; }
     //width: 80vw;
     max-width: 500px;
     position: relative;
+    overflow: unset;
 
     .section-header-content{
         position: absolute;
@@ -201,21 +217,26 @@ h6{ font-size: 1rem !important; }
     }
 }
 
-
-@keyframes move {
+@keyframes header-leafs-1-move {
     from {
-        transform : translate(0, 0);
+        transform: rotate(0);
     }
-    20% {
-        transform : translate(5px, -2px);
+    33% {
+        transform: rotate(5deg);
     }
-    40% {
-        transform : translate(4px, 1px);
+    66% {
+        transform: rotate(-2deg);
     }
-    80% {
-        transform : translate(-3px, 2px);
+}
+
+@keyframes header-leafs-2-move {
+    from {
+        transform: rotate(73deg);
     }
-    to {
-        transform : translate(0, 0);
+    33% {
+        transform: rotate(76deg);
+    }
+    66% {
+        transform: rotate(70deg);
     }
 }
