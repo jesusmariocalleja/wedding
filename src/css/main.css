@@ -53,6 +53,7 @@ h6 {
 
 #wrapper header {
   position: relative;
+  overflow: initial;
 }
 
 .full-screen-section {
@@ -74,12 +75,10 @@ h6 {
 
 #header #header-title {
   font-size: 70px !important;
-  z-index: 1;
 }
 
 #header #header-subtitle {
   text-align: center;
-  z-index: 1;
 }
 
 #header #leafs-1-wrapper {
@@ -90,13 +89,8 @@ h6 {
 }
 
 #header #leafs-1-wrapper #leafs-1 {
-  width: 50vw;
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
   -webkit-animation: header-leafs-1-move 20s infinite ease-in-out;
           animation: header-leafs-1-move 20s infinite ease-in-out;
-  -webkit-filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.2));
 }
 
 #header #leafs-2-wrapper {
@@ -107,15 +101,19 @@ h6 {
 }
 
 #header #leafs-2-wrapper #leafs-2 {
-  width: 50vw;
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
   -webkit-transform: rotate(73deg);
           transform: rotate(73deg);
   -webkit-animation: header-leafs-2-move 20s 2s infinite ease-in-out;
           animation: header-leafs-2-move 20s 2s infinite ease-in-out;
-  -webkit-filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.2));
+}
+
+#header #leafs-1,
+#header #leafs-2 {
+  width: 50vw;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
 }
 
 #header #header-circle-bg {
@@ -218,8 +216,6 @@ h6 {
   max-width: 100%;
   -webkit-animation: section-header-rotate 20s infinite ease-in-out;
           animation: section-header-rotate 20s infinite ease-in-out;
-  -webkit-filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.1));
-          filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.1));
 }
 
 #wedding-date {
@@ -233,10 +229,39 @@ h6 {
 }
 
 #countdown-wrapper #countdown {
-  display: inline-block;
-  padding: 1em;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
+      grid-template-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
   color: #3bbcaf;
-  border: 1px solid #3bbcaf;
+  -webkit-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+}
+
+#countdown-wrapper #countdown .countdown-slot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#countdown-wrapper #countdown .countdown-slot .countdown-time {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#countdown-wrapper #countdown .countdown-slot .countdown-time-label {
+  font-size: 12px;
+}
+
+#countdown-wrapper #countdown .countdown-slot-separator {
+  padding-top: 0.25rem;
 }
 
 #add-to-calendar {

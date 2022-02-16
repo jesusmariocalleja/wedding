@@ -13,7 +13,7 @@ body{
 
 
 @mixin leafs-drop-shadow {
-    filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.2));
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.4));
 }
 
 @mixin header-bg-drop-shadow {
@@ -47,6 +47,7 @@ h6{ font-size: 1rem !important; }
 
     header{
         position: relative;
+        overflow: initial; //Para que las hojas no se corten por debajo
     }
 }
 
@@ -64,15 +65,18 @@ h6{ font-size: 1rem !important; }
     //position: relative;
     animation: show 2s;
 
+    #header-title,
+    #header-subtitle{
+        //z-index: 1;
+    }
+
     #header-title{
         font-size: 70px !important;
         //font-weight: bold;
-        z-index: 1;
     }
 
     #header-subtitle{
         text-align: center;
-        z-index: 1;
     }
 
     #leafs-1-wrapper{
@@ -82,10 +86,7 @@ h6{ font-size: 1rem !important; }
         overflow: unset;
 
         #leafs-1{ 
-            width: 50vw;
-            transform-origin: bottom right;
             animation: header-leafs-1-move 20s infinite ease-in-out;
-            @include leafs-drop-shadow();
         }
 
     }
@@ -97,12 +98,16 @@ h6{ font-size: 1rem !important; }
         overflow: unset;
 
         #leafs-2{
-            width: 50vw;
-            transform-origin: bottom right;
             transform: rotate(73deg);
             animation: header-leafs-2-move 20s 2s infinite ease-in-out;
-            @include leafs-drop-shadow();
         }
+    }
+
+    #leafs-1,
+    #leafs-2{
+        width: 50vw;
+        transform-origin: bottom right;
+        @include leafs-drop-shadow();
     }
 
     #header-circle-bg{
@@ -174,7 +179,7 @@ h6{ font-size: 1rem !important; }
         width: 100%;
         max-width: 100%;
         animation: section-header-rotate 20s infinite ease-in-out;
-        @include header-bg-drop-shadow();
+        //@include header-bg-drop-shadow();
     }
 }
 
@@ -190,10 +195,30 @@ h6{ font-size: 1rem !important; }
     #countdown{
         //font-weight: bold;
         $countdown-color: #3bbcaf;
-        display: inline-block;
-        padding: 1em;
+        display: inline-grid;
+        grid-template-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
+        //padding: 1em;
         color: $countdown-color;
-        border: 1px solid $countdown-color;
+        column-gap: 0.25rem;
+        //border: 1px solid $countdown-color;
+        .countdown-slot{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .countdown-time{
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .countdown-time-label{
+                font-size: 12px;
+            }
+        }
+
+        .countdown-slot-separator{
+            padding-top: 0.25rem;
+        }
     }
 
 }
