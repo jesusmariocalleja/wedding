@@ -233,11 +233,9 @@ h6 {
   display: inline-grid;
   -ms-grid-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
       grid-template-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
-  padding: 1em;
   color: #3bbcaf;
   -webkit-column-gap: 0.25rem;
           column-gap: 0.25rem;
-  border: 1px solid #3bbcaf;
 }
 
 #countdown-wrapper #countdown .countdown-slot {
@@ -254,7 +252,7 @@ h6 {
 }
 
 #countdown-wrapper #countdown .countdown-slot .countdown-time {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -263,7 +261,7 @@ h6 {
 }
 
 #countdown-wrapper #countdown .countdown-slot-separator {
-  padding-top: 0.25rem;
+  padding-top: 0.5rem;
 }
 
 #add-to-calendar {

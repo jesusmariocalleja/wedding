@@ -197,17 +197,17 @@ h6{ font-size: 1rem !important; }
         $countdown-color: #3bbcaf;
         display: inline-grid;
         grid-template-columns: 1fr 5px 1fr 5px 1fr 5px 1fr;
-        padding: 1em;
+        //padding: 1em;
         color: $countdown-color;
         column-gap: 0.25rem;
-        border: 1px solid $countdown-color;
+        //border: 1px solid $countdown-color;
         .countdown-slot{
             display: flex;
             flex-direction: column;
             align-items: center;
 
             .countdown-time{
-                font-size: 20px;
+                font-size: 25px;
                 font-weight: bold;
             }
 
@@ -217,7 +217,7 @@ h6{ font-size: 1rem !important; }
         }
 
         .countdown-slot-separator{
-            padding-top: 0.25rem;
+            padding-top: 0.5rem;
         }
     }
 
