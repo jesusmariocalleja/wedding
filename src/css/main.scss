@@ -27,14 +27,18 @@ h4{ font-size: 1.5rem !important; }
 h5{ font-size: 1.25rem !important; }
 h6{ font-size: 1rem !important; }
 
-header, section{
-    padding: 0 1rem;
-}
-
 #wrapper{
     width: 100vw;
     scroll-snap-type: y mandatory;
     overflow-y: auto;
+
+    header, section{
+        padding: 0 1rem;
+    }
+
+    header{
+        position: relative;
+    }
 }
 
 .full-screen-section{
@@ -54,13 +58,20 @@ header, section{
     place-content: center;
     width: 80vw;
     height: 80vh;
-    position: relative;
+    //position: relative;
     animation: show 2s;
 
     #header-title{
         font-size: 70px !important;
         //font-weight: bold;
         z-index: 1;
+    }
+
+    #leafs-1{
+        position: absolute;
+        width: 50vw;
+        bottom: -50px;
+        right: -50px;    
     }
 
     #header-circle-bg{
