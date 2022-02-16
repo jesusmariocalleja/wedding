@@ -77,6 +77,11 @@ h6 {
   z-index: 1;
 }
 
+#header #header-subtitle {
+  text-align: center;
+  z-index: 1;
+}
+
 #header #leafs-1-wrapper {
   position: absolute;
   bottom: -50px;
@@ -212,7 +217,20 @@ h6 {
 }
 
 #wedding-date {
+  margin-top: 0.5rem;
   font-weight: bold;
+}
+
+#countdown-wrapper {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#countdown-wrapper #countdown {
+  display: inline-block;
+  padding: 1em;
+  color: #3bbcaf;
+  border: 1px solid #3bbcaf;
 }
 
 #add-to-calendar {

@@ -61,6 +61,11 @@ h6{ font-size: 1rem !important; }
         z-index: 1;
     }
 
+    #header-subtitle{
+        text-align: center;
+        z-index: 1;
+    }
+
     #leafs-1-wrapper{
         position: absolute;
         bottom: -50px;
@@ -162,11 +167,23 @@ h6{ font-size: 1rem !important; }
 }
 
 #wedding-date{
+    margin-top: 0.5rem;
     font-weight: bold;
 }
 
-#countdown{
-    //font-weight: bold;
+#countdown-wrapper{
+    margin-top: 1rem;
+    text-align: center;
+
+    #countdown{
+        //font-weight: bold;
+        $countdown-color: #3bbcaf;
+        display: inline-block;
+        padding: 1em;
+        color: $countdown-color;
+        border: 1px solid $countdown-color;
+    }
+
 }
 
 #add-to-calendar{
