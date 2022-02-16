@@ -1,7 +1,7 @@
 countdown();
 
 function countdown(){
-    const targetTime = moment('2022-11-05 13:00');
+    const targetTime = moment('2022-11-05 12:00');
     var element = document.getElementById('countdown'); 
     
     printTime(element, targetTime);
@@ -12,5 +12,8 @@ function countdown(){
 
 function printTime(element, targetTime){
     const timeBetween = moment.duration(targetTime.diff(moment()));
-    element.innerText = `${timeBetween.months()} meses, ${timeBetween.days()} días, ${timeBetween.hours()} horas, ${timeBetween.minutes()} minutos y ${timeBetween.seconds()} segundos`;
+    // Días
+    element.innerText = `${parseInt(timeBetween.asDays())} días, ${timeBetween.hours()} horas, ${timeBetween.minutes()} minutos y ${timeBetween.seconds()} segundos`;
+    // Meses y días
+    //element.innerText = `${timeBetween.months()} meses, ${timeBetween.days()} días, ${timeBetween.hours()} horas, ${timeBetween.minutes()} minutos y ${timeBetween.seconds()} segundos`;
 }
