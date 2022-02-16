@@ -201,7 +201,7 @@ h6 {
 }
 
 .section-header .section-header-content .section-header-title.small {
-  font-size: 65px !important;
+  font-size: 60px !important;
 }
 
 .section-header .section-header-bg {
@@ -233,9 +233,11 @@ h6 {
 }
 
 #address {
+  display: block;
   text-align: center;
   margin-top: 2rem;
   font-style: italic;
+  text-decoration: underline;
 }
 
 #map-container {
