@@ -11,6 +11,15 @@ body{
     font-family: 'Licorice', cursive;
 }
 
+
+@mixin leafs-drop-shadow {
+    filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.2));
+}
+
+@mixin header-bg-drop-shadow {
+    filter: drop-shadow(2px 2px 10px rgba(0,0,0,0.1));
+}
+
 .font-licorice{
     @include font-licorice();
 }
@@ -76,6 +85,7 @@ h6{ font-size: 1rem !important; }
             width: 50vw;
             transform-origin: bottom right;
             animation: header-leafs-1-move 20s infinite ease-in-out;
+            @include leafs-drop-shadow();
         }
 
     }
@@ -91,6 +101,7 @@ h6{ font-size: 1rem !important; }
             transform-origin: bottom right;
             transform: rotate(73deg);
             animation: header-leafs-2-move 20s 2s infinite ease-in-out;
+            @include leafs-drop-shadow();
         }
     }
 
@@ -163,6 +174,7 @@ h6{ font-size: 1rem !important; }
         width: 100%;
         max-width: 100%;
         animation: section-header-rotate 20s infinite ease-in-out;
+        @include header-bg-drop-shadow();
     }
 }
 
