@@ -171,6 +171,10 @@ header, section {
   font-size: 70px !important;
 }
 
+.section-header .section-header-content .section-header-title.small {
+  font-size: 65px !important;
+}
+
 .section-header .section-header-bg {
   width: 100%;
   max-width: 100%;

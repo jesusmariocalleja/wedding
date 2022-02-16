@@ -120,6 +120,10 @@ header, section{
 
         .section-header-title{
             font-size: 70px !important;
+
+            &.small{
+                font-size: 65px !important;
+            }
         }
     }
 
