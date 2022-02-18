@@ -52,8 +52,12 @@ h6{ font-size: 1rem !important; }
 }
 
 .full-screen-section{
-    display: grid;
-    place-content: center;
+    // display: grid;
+    // place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     scroll-snap-align: start;
 }
 
@@ -156,6 +160,7 @@ h6{ font-size: 1rem !important; }
     max-width: 500px;
     position: relative;
     overflow: unset;
+    margin: 0 auto;
 
     .section-header-content{
         position: absolute;
@@ -228,11 +233,12 @@ h6{ font-size: 1rem !important; }
     margin-top: 2.5rem;
 
     #add-to-calendar-button{
-        display: inline-block;
+        display: inline-flex;
+        align-items: baseline;
         color: white;
         background-color: #89c6bb; //#96d9cd;
         transition: .2s;
-
+        
         &:hover{
             background-color: #78ada4;
         }
@@ -253,6 +259,39 @@ h6{ font-size: 1rem !important; }
 
     iframe{
         margin: 0 auto;
+    }
+}
+
+#transfer-claim{
+    max-width: 100%;
+    width: 310px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+#bank-account{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#copy-bank-account-button-wrapper{
+    text-align: center;
+    margin-top: 1.5rem;
+
+    #copy-bank-account-button{
+        display: inline-flex;
+        align-items: baseline;
+        background-color: #cab1d4;
+        //color: white;
+        cursor: pointer;
+        transition: .2s;
+        
+        &:hover{
+            background-color: #ac7ac0;
+        }
     }
 }
         

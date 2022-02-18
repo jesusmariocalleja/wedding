@@ -7,6 +7,7 @@
     <title>R&J</title>
     <link rel="stylesheet" href="./src/css/main.css?v=6">
     <link rel="stylesheet" href="./dist/output.css?v=6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
@@ -16,6 +17,7 @@
 <body>
     <div id="wrapper">
         <header 
+            id="portada"
             class="full-screen-section">
             <div id="header">
                 <h1 id="header-title">Raquel y Jesús</h1>
@@ -34,7 +36,9 @@
             </div>
         </header>
         <!-- Fecha -->
-        <section class="full-screen-section ">
+        <section
+            id="fecha" 
+            class="full-screen-section ">
             <div class="section-header">
                 <img 
                     class="section-header-bg"
@@ -89,14 +93,17 @@
                         class=" font-bold py-2 px-4 rounded-full"
                         href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%F0%9F%92%8DBoda+Raquel+y+Jes%C3%BAs%20%F0%9F%92%96&dates=20221105T110000Z/20221105T210000Z&details=%C2%A1Gracias+por+venir!%20:)%20&location=Can%20Ribas%20de%20Montbui,%20Cam%C3%AD%20de%20Can%20Ribas,%20s/n,%2008415%20Bigues%20i%20Riells,%20Barcelona,%20Espa%C3%B1a&sf=true&output=xml"
                         target="_blank">
-                        + Añadir a tu calendario
+                        <i class="fa-solid fa-plus"></i>
+                        <span>&nbsp;Añadir a tu calendario</span>
                     </a>
 
                 </div>
             </div>
         </section>
         <!-- Lugar -->
-        <section class="full-screen-section ">
+        <section
+            id="lugar" 
+            class="full-screen-section ">
             <div class="section-header">
                 <img 
                     class="section-header-bg"
@@ -128,7 +135,9 @@
             </div>
         </section>
         <!-- Lista de bodas -->
-        <section class="full-screen-section ">
+        <section
+            id="lista" 
+            class="full-screen-section ">
             <div class="section-header">
                 <img 
                     class="section-header-bg"
@@ -138,11 +147,27 @@
                 </div>
             </div>
             <div class="section-content">
-                
+                <div id="transfer-claim">Que vengas ya es un regalo, pero si quieres hacer una aportación, este es nuestro número de cuenta. ¡Gracias! <span style="font-style: normal;">😻</span></div>
+                <!-- <span style="font-size: 16px">☺</span> -->
+                <div id="bank-account">ES53&nbsp;1563&nbsp;2626&nbsp;37&nbsp;3261283080</div>
+                <div 
+                    id="copy-bank-account-button-wrapper"
+                    onclick="copyBankAccountToClipboard()">
+                    <span 
+                        id="copy-bank-account-button"
+                        class="font-bold py-2 px-4 rounded-full"
+                        href=""
+                        target="_blank">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>&nbsp;&nbsp;Copiar</span>
+                    </span>
+                </div>
             </div>
         </section>
         <!-- Alojamiento -->
-        <section class="full-screen-section ">
+        <section
+            id="alojamiento" 
+            class="full-screen-section ">
             <div class="section-header">
                 <img 
                     class="section-header-bg"
@@ -152,7 +177,7 @@
                 </div>
             </div>
             <div class="section-content">
-                
+                <div style="margin-top: 3rem; font-style: italic; text-align: center; color: #888">Próximamente...</div>
             </div>
         </section>
         <!-- <section class="full-screen-section ">
@@ -162,5 +187,6 @@
     </div>
     <script src="./src/js/visuals.js?v=6"></script>
     <script src="./src/js/countdown.js?v=6"></script>
+    <script src="./src/js/clipboard.js?v=6"></script>
 </body>
 </html>
