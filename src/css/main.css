@@ -70,6 +70,8 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
   scroll-snap-align: start;
 }
 
@@ -91,8 +93,13 @@ h6 {
   text-align: center;
 }
 
-#header #leafs-1-wrapper {
+#header #leafs-1-wrapper,
+#header #leafs-2-wrapper {
   position: absolute;
+  overflow: unset;
+}
+
+#header #leafs-1-wrapper {
   bottom: -50px;
   right: -50px;
   overflow: unset;
@@ -104,10 +111,8 @@ h6 {
 }
 
 #header #leafs-2-wrapper {
-  position: absolute;
   top: -100px;
-  left: -75vw;
-  overflow: unset;
+  left: -300px;
 }
 
 #header #leafs-2-wrapper #leafs-2 {
@@ -120,6 +125,7 @@ h6 {
 #header #leafs-1,
 #header #leafs-2 {
   width: 50vw;
+  max-width: 220px;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));

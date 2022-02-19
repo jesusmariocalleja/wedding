@@ -58,6 +58,8 @@ h6{ font-size: 1rem !important; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
     scroll-snap-align: start;
 }
 
@@ -82,9 +84,14 @@ h6{ font-size: 1rem !important; }
     #header-subtitle{
         text-align: center;
     }
+    
+    #leafs-1-wrapper,
+    #leafs-2-wrapper{
+        position: absolute;
+        overflow: unset;
+    }
 
     #leafs-1-wrapper{
-        position: absolute;
         bottom: -50px;
         right: -50px;
         overflow: unset;
@@ -96,10 +103,8 @@ h6{ font-size: 1rem !important; }
     }
 
     #leafs-2-wrapper{
-        position: absolute;
         top: -100px;
-        left: -75vw;
-        overflow: unset;
+        left: -300px;
 
         #leafs-2{
             transform: rotate(73deg);
@@ -110,6 +115,7 @@ h6{ font-size: 1rem !important; }
     #leafs-1,
     #leafs-2{
         width: 50vw;
+        max-width: 220px;
         transform-origin: bottom right;
         @include leafs-drop-shadow();
     }
