@@ -61,6 +61,55 @@ h6{ font-size: 1rem !important; }
     max-width: 400px;
     margin: 0 auto;
     scroll-snap-align: start;
+
+    //Header
+    #header-title,
+    #header-subtitle,
+    .header-leaf{
+        opacity: 0;
+        transition: 1s;
+    }
+    //Sections
+    .section-header-bg,
+    .section-header-content,
+    .section-content{
+        opacity: 0;
+        transition: .7s;
+    }
+
+    &.fade{
+        //Header
+        #header-title,
+        #header-subtitle,
+        .header-leaf,
+        //Sections
+        .section-header-bg,
+        .section-header-content,
+        .section-content{
+            opacity: 1;
+        } 
+
+        //Header
+        .header-leaf{
+            transition-delay: 0;
+        }
+        #header-title{
+            transition-delay: .8s;
+        }
+        #header-subtitle{
+            transition-delay: 1.3s;
+        }
+        // Sections
+        .section-header-bg{
+            transition-delay: 0;
+        }
+        .section-header-content{
+            transition-delay: .2s;
+        }
+        .section-content{
+            transition-delay: .4s;
+        }
+    }
 }
 
 #header{
@@ -69,7 +118,6 @@ h6{ font-size: 1rem !important; }
     width: 80vw;
     height: 80vh;
     //position: relative;
-    animation: show 2s;
 
     #header-title,
     #header-subtitle{
@@ -147,16 +195,6 @@ h6{ font-size: 1rem !important; }
             to{
                 transform: rotate(20deg);
             }
-        }
-    }
-
-
-    @keyframes show {
-        from{
-            opacity: 0;
-        }
-        to{
-            opacity: 1;
         }
     }
 }
