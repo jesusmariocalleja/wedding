@@ -24,7 +24,7 @@ function onResize(){
 
 function appearOnScroll(){
     const intersectionScrollOpts = {
-        threshold: 1
+        threshold: 0.5
     };
     const intersectionScrollObserver = new IntersectionObserver((entries, intersectionScrollObserver) => {
         entries.forEach(entry => {

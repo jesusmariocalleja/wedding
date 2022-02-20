@@ -77,18 +77,13 @@ h6 {
 
 .full-screen-section #header-title,
 .full-screen-section #header-subtitle,
-.full-screen-section .header-leaf {
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
+.full-screen-section .header-leaf,
 .full-screen-section .section-header-bg,
 .full-screen-section .section-header-content,
 .full-screen-section .section-content {
   opacity: 0;
-  -webkit-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .full-screen-section.fade #header-title,
@@ -121,13 +116,13 @@ h6 {
 }
 
 .full-screen-section.fade .section-header-content {
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
 }
 
 .full-screen-section.fade .section-content {
-  -webkit-transition-delay: .4s;
-          transition-delay: .4s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 #header {

@@ -65,16 +65,13 @@ h6{ font-size: 1rem !important; }
     //Header
     #header-title,
     #header-subtitle,
-    .header-leaf{
-        opacity: 0;
-        transition: 1s;
-    }
+    .header-leaf,
     //Sections
     .section-header-bg,
     .section-header-content,
     .section-content{
         opacity: 0;
-        transition: .7s;
+        transition: 1s;
     }
 
     &.fade{
@@ -104,10 +101,10 @@ h6{ font-size: 1rem !important; }
             transition-delay: 0;
         }
         .section-header-content{
-            transition-delay: .2s;
+            transition-delay: .5s;
         }
         .section-content{
-            transition-delay: .4s;
+            transition-delay: 1s;
         }
     }
 }
