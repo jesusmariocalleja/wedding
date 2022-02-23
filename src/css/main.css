@@ -86,6 +86,15 @@ h6 {
   transition: 1s;
 }
 
+.full-screen-section #header-title,
+.full-screen-section #header-subtitle,
+.full-screen-section .section-header-bg,
+.full-screen-section .section-header-content,
+.full-screen-section .section-content {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .full-screen-section.fade #header-title,
 .full-screen-section.fade #header-subtitle,
 .full-screen-section.fade .header-leaf,
@@ -93,6 +102,15 @@ h6 {
 .full-screen-section.fade .section-header-content,
 .full-screen-section.fade .section-content {
   opacity: 1;
+}
+
+.full-screen-section.fade #header-title,
+.full-screen-section.fade #header-subtitle,
+.full-screen-section.fade .section-header-bg,
+.full-screen-section.fade .section-header-content,
+.full-screen-section.fade .section-content {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .full-screen-section.fade .header-leaf {
@@ -116,13 +134,13 @@ h6 {
 }
 
 .full-screen-section.fade .section-header-content {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
 }
 
 .full-screen-section.fade .section-content {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
 }
 
 #header {
@@ -252,17 +270,22 @@ h6 {
 
 .section-header .section-header-content .section-header-title {
   font-size: 70px !important;
+  -webkit-filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.5));
 }
 
 .section-header .section-header-content .section-header-title.small {
   font-size: 60px !important;
 }
 
-.section-header .section-header-bg {
-  width: 100%;
-  max-width: 100%;
+.section-header .section-header-bg-wrapper {
   -webkit-animation: section-header-rotate 20s infinite ease-in-out;
           animation: section-header-rotate 20s infinite ease-in-out;
+}
+
+.section-header .section-header-bg-wrapper .section-header-bg {
+  width: 100%;
+  max-width: 100%;
 }
 
 #wedding-date {
