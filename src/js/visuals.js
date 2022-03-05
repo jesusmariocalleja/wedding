@@ -37,7 +37,7 @@ function appearOnScroll(){
         })
     }, intersectionScrollOpts);
 
-    const sections = document.querySelectorAll('.full-screen-section');
+    const sections = document.querySelectorAll('.appear-on-scroll');
     sections.forEach(section => {
         intersectionScrollObserver.observe(section);
     })

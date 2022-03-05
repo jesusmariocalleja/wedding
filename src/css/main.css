@@ -11,6 +11,10 @@ body {
   font-family: 'Licorice', cursive;
 }
 
+.overflow-initial {
+  overflow: initial;
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-family: 'Licorice', cursive;
@@ -38,6 +42,23 @@ h5 {
 
 h6 {
   font-size: 1rem !important;
+}
+
+p {
+  text-align: justify;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+.comment {
+  font-style: italic;
+  color: #777;
+}
+
+.tally-popup {
+  overflow: initial;
 }
 
 #wrapper {
@@ -410,6 +431,142 @@ h6 {
 
 #copy-bank-account-button-wrapper #copy-bank-account-button:hover {
   background-color: #ac7ac0;
+}
+
+#hotels-intro {
+  margin-top: 3rem;
+}
+
+#hotels-list {
+  margin-top: 2rem;
+  overflow: initial;
+}
+
+#hotels-list .hotel {
+  overflow: initial;
+}
+
+#hotels-list .hotel .hotel-name {
+  text-align: left;
+  font-family: inherit;
+}
+
+#hotels-list .hotel .hotel-attributes {
+  margin-top: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#hotels-list .hotel .hotel-attributes .hotel-attribute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hotels-list .hotel .hotel-attributes .hotel-attribute + .hotel-attribute {
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid #ddd;
+}
+
+#hotels-list .hotel .hotel-image {
+  margin-top: 0.5rem;
+}
+
+#hotels-list .hotel .hotel-image img {
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+
+#hotels-list .hotel .hotel-description {
+  margin-top: 1rem;
+}
+
+#hotels-list .hotel .hotel-description a {
+  text-decoration: underline;
+  color: #fa79b1;
+}
+
+#hotels-list .hotel .hotel-description ul + p,
+#hotels-list .hotel .hotel-description p + ul {
+  margin-top: 1rem;
+}
+
+#hotels-list .hotel .hotel-actions {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#hotels-list .hotel .hotel-actions a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffcae1;
+  font-size: 12px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#hotels-list .hotel .hotel-actions a:hover {
+  background-color: #fca4ca;
+}
+
+#hotels-list .hotel .hotel-actions a + a {
+  margin-left: 0.5rem;
+}
+
+#hotels-list .hotel + .hotel {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ddd;
+}
+
+#bus-booking {
+  margin-top: 2rem;
+}
+
+#bus-booking h4 {
+  text-align: left;
+  font-family: inherit;
+}
+
+#bus-booking #book-bus-form-button-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#bus-booking #book-bus-form-button-wrapper #book-bus-form-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fca4ca;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#bus-booking #book-bus-form-button-wrapper #book-bus-form-button:hover {
+  background-color: #fa79b1;
 }
 
 @-webkit-keyframes section-header-rotate {

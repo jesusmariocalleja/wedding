@@ -13,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://tally.so/widgets/embed.js"></script>
     <script src="./index.js"></script>
 </head>
 <body>
     <div id="wrapper">
         <header 
             id="portada"
-            class="full-screen-section">
+            class="full-screen-section appear-on-scroll">
             <div id="header">
                 <h1 id="header-title">Raquel y Jesús</h1>
                 <h3 id="header-subtitle" class="text-gray-500">¡Nos casamos!</h3>
@@ -41,7 +42,7 @@
         <!-- Fecha -->
         <section
             id="fecha" 
-            class="full-screen-section">
+            class="full-screen-section appear-on-scroll">
             <div class="section-header">
                 <div class="section-header-bg-wrapper">
                     <img 
@@ -108,7 +109,7 @@
         <!-- Lugar -->
         <section
             id="lugar" 
-            class="full-screen-section">
+            class="full-screen-section appear-on-scroll">
             <div class="section-header">
                 <div class="section-header-bg-wrapper">
                     <img 
@@ -144,7 +145,7 @@
         <!-- Lista de bodas -->
         <section
             id="lista" 
-            class="full-screen-section">
+            class="full-screen-section appear-on-scroll">
             <div class="section-header">
                 <div class="section-header-bg-wrapper">
                     <img 
@@ -174,7 +175,7 @@
         <!-- Alojamiento -->
         <section
             id="alojamiento" 
-            class="full-screen-section">
+            class="full-screen-section appear-on-scroll">
             <div class="section-header">
                 <div class="section-header-bg-wrapper">
                     <img 
@@ -186,7 +187,119 @@
                 </div>
             </div>
             <div class="section-content">
-                <div style="margin-top: 3rem; font-style: italic; text-align: center; color: #888">Próximamente...</div>
+                <div id="hotels-intro">
+                    <p>Después de un largo día de fiesta y celebración, toca ponerse el pijama. Si en vez de conducir hasta casa prefieres quedarte a dormir por los alrededores, os ofrecemos dos opciones para pasar la noche en la ciudad de <strong>Granollers</strong>.</p>
+                    <p>Se trata de dos hoteles situados en el centro de la ciudad y de los que podrás disfrutar de algunas condiciones especiales si dices que vienes de parte de los novios. A continuación, detallamos más información sobre estos dos alojamientos.</p>
+                </div>
+            </div>
+        </section>
+        <section
+            class="full-screen-section">
+            <div id="hotels-list">
+                <div class="hotel">
+                    <h3 class="hotel-name">Hotel Ciutat de Granollers</h3>
+                    <div class="hotel-attributes">
+                        <div class="hotel-stars hotel-attribute">⭐⭐⭐⭐</div>
+                        <div class="hotel-time hotel-attribute">⏱️ 25 min.</div>
+                        <div class="hotel-capacity hotel-attribute">👫 54 pax</div>
+                    </div>
+                    <div class="hotel-image">
+                        <img src="https://www.hotelciutatgranollers.com/cache/72/63/72631250eb45f25f59065813512c73b9.jpg" alt="">
+                    </div>
+                    <div class="hotel-description">
+                        <p>Para realizar la reserva y que se aplique un 10% de descuento a la tarifa de la habitación, se debe enviar un mensaje al correo: <a href="mailto:granollers@ciutathotels.com">granollers@ciutathotels.com</a> con el asunto: <strong>BODA JESÚS Y RAQUEL</strong>.</p>
+                        <ul>
+                            <li>- Individual con descuento: <strong>54€</strong> (63€ con desayuno)</li>
+                            <li>- Doble con descuento: <strong>68,18€</strong> (84,54€ con desayuno)</li>
+                            <li>- Triple con descuento: <strong>78€</strong> (105€ con desayuno)</li>
+                        </ul>
+                        <p class="comment">No obstante, si haces la reserva con <strong>Booking</strong>, podría ser que la plataforma os aplique un mayor descuento al ya mencionado, dependiendo del nivel de fidelización que tengas con la plataforma.</p>
+                    </div>
+                    <div class="hotel-actions">
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            target="_blank"
+                            href="mailto:granollers@ciutathotels.com?subject=BODA JESÚS Y RAQUEL&body=Hola, me gustaría reservar una habitación [doble, individual...] del 5 al 6 de noviembre para la boda de Raquel y Jesús, disfrutando del 10% de descuento. Muchas gracias.">
+                            <span>✉️ Email</span>
+                        </a>
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            href="tel:+34938796220">
+                            <span>📞 Llamar</span>
+                        </a>
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            target="_blank"
+                            href="https://www.hotelciutatgranollers.com/">
+                            <span>🌐 Web</span>
+                        </a>
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            target="_blank"
+                            href="https://goo.gl/maps/3jyRjyeMAjoyZjdP8">
+                            <span>📍Mapa</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hotel">
+                    <h3 class="hotel-name">Aparthotel Atenea Valles</h3>
+                    <div class="hotel-attributes">
+                        <div class="hotel-stars hotel-attribute">⭐⭐⭐⭐</div>
+                        <div class="hotel-time hotel-attribute">⏱️ 25 min.</div>
+                        <div class="hotel-capacity hotel-attribute">👫 50 pax</div>
+                    </div>
+                    <div class="hotel-image">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/f6/bb/94/recepcion.jpg" alt="">
+                    </div>
+                    <div class="hotel-description">
+                        <p>Para reservar con las siguientes tarifas, debes registrarte en el club <strong>City Hotels</strong> durante el proceso de reserva en su web.</p>
+                        <ul>
+                            <li>- Individual: <strong>60,80€</strong></li>
+                            <li>- Doble: <strong>64,60€</strong></li>
+                            <li>- Doble superior: <strong>76€</strong></li>
+                            <li>- Triple y familiar: <strong>79,80€</strong></li>
+                            <li>- Quíntuple y séxtuple: <strong>110,20€</strong> / <strong>125,40€</strong></li>
+                        </ul>
+                    </div>
+                    <div class="hotel-actions">
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            target="_blank"
+                            href="mailto:ateneav@cityhotels.es?subject=BODA JESÚS Y RAQUEL&body=Hola, me gustaría reservar una habitación [doble, individual...] del 5 al 6 de noviembre para la boda de Raquel y Jesús, disfrutando del 10% de descuento. Muchas gracias.">
+                            <span>✉️ Email</span>
+                        </a>
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            href="tel:+34938794820">
+                            <span>📞 Llamar</span>
+                        </a>
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            target="_blank"
+                            href="https://www.aparthotelateneavalles.com/es/">
+                            <span>🌐 Web</span>
+                        </a>
+                        <a 
+                            class="py-2 px-4 rounded-full"
+                            target="_blank"
+                            href="https://goo.gl/maps/fgBTUMTUbJegGLKc7">
+                            <span>📍Mapa</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="bus-booking">
+                <h4>Autocar</h4>
+                <p>Los que os alojéis en uno de estos dos hoteles, dispondréis de un autocar que os llevará desde vuestro alojamiento hasta Can Ribas el <strong>sábado por la mañana</strong> y desde Can Ribas hasta vuestro alojamiento esa <strong>misma noche</strong>, una vez finalizada la celebración. ¡Así tenéis excusa para que no termine la fiesta!</p>
+                <p>Si estás interesado/a en utilizar el servicio de autocar, te pedimos que <strong>guardes una plaza</strong> para ti y los tuyos. ¡Gracias!</p>
+                <div id="book-bus-form-button-wrapper"> 
+                    <span 
+                        id="book-bus-form-button"
+                        class="font-bold py-2 px-4 rounded-full"
+                        onclick="openBusForm()">
+                        <span>🚌 Guardar plaza</span>
+                    </span>
+                </div>
             </div>
         </section>
         <!-- <section class="full-screen-section ">
@@ -197,5 +310,6 @@
     <script src="./src/js/visuals.js?v=8"></script>
     <script src="./src/js/countdown.js?v=8"></script>
     <script src="./src/js/clipboard.js?v=8"></script>
+    <script src="./src/js/forms.js?v=8"></script>
 </body>
 </html>
