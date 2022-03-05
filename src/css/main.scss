@@ -431,7 +431,7 @@ p{
         }
 
         .hotel-actions{
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             display: flex;
             justify-content: flex-end;
             
@@ -440,6 +440,7 @@ p{
                 align-items: center;
                 background-color: #ffcae1;
                 font-size: 12px;
+                padding: 0.5rem 0.75rem;
                 cursor: pointer;
                 transition: .2s;
                 

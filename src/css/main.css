@@ -500,7 +500,7 @@ p + p {
 }
 
 #hotels-list .hotel .hotel-actions {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,6 +518,7 @@ p + p {
           align-items: center;
   background-color: #ffcae1;
   font-size: 12px;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   -webkit-transition: .2s;
   transition: .2s;
