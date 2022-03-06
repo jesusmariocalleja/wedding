@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💘R&J💘</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/main.css?v=8">
     <link rel="stylesheet" href="./dist/output.css?v=8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,6 +22,7 @@
         <header 
             id="portada"
             class="full-screen-section appear-on-scroll">
+            <div id="header-background"></div>
             <div id="header">
                 <h1 id="header-title">Raquel y Jesús</h1>
                 <h3 id="header-subtitle" class="text-gray-500">¡Nos casamos!</h3>
@@ -36,6 +38,9 @@
                         id="leafs-2" 
                         class="header-leaf"
                         src="./assets/img/hojas-1.png" alt="">
+                </div>
+                <div id="home-spot-wrapper">
+                    <img src="./assets/img/watercolor-spot-home.png" alt="">
                 </div>
             </div>
         </header>
@@ -142,6 +147,54 @@
                 <!-- <img style="margin-top: 2rem" src="./assets/img/can-ribas.jpg" alt=""> -->
             </div>
         </section>
+        <!-- Programa -->
+        <section
+            id="lista" 
+            class="full-screen-section appear-on-scroll">
+            <div class="section-header">
+                <div class="section-header-bg-wrapper">
+                    <img 
+                        class="section-header-bg"
+                        src="./assets/img/acuarela-verde-2.png">
+                </div>
+                <div class="section-header-content">
+                    <h2 class="section-header-title">Programa</h2>
+                </div>
+            </div>
+            <div class="section-content">
+                <div id="time-table">
+                    <p>Aquí tienes un horario aproximado del día de nuestra celebración, para que te hagas una idea de cómo va a ser y puedas planificarte <span>🕑</span></p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>11:30h</td>
+                                <td>Bienvenida</td>
+                            </tr>
+                            <tr>
+                                <td>12h</td>
+                                <td>Ceremonia</td>
+                            </tr>
+                            <tr>
+                                <td>13h</td>
+                                <td>Aperitivo</td>
+                            </tr>
+                            <tr>
+                                <td>15h</td>
+                                <td>Banquete </td>
+                            </tr>
+                            <tr>
+                                <td>17h</td>
+                                <td>¡Que la fiesta no termine! </td>
+                            </tr>
+                            <tr>
+                                <td>19h - 20h</td>
+                                <td>Hora de despedirnos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
         <!-- Lista de bodas -->
         <section
             id="lista" 
@@ -183,7 +236,7 @@
                         src="./assets/img/acuarela-rosa.png">
                 </div>
                 <div class="section-header-content">
-                    <h2 class="section-header-title">Alojamiento</h2>
+                    <h2 class="section-header-title compact">Alojamiento y Autobús</h2>
                 </div>
             </div>
             <div class="section-content">
@@ -241,6 +294,7 @@
                         </a>
                     </div>
                 </div>
+                <div class="divider"></div>
                 <div class="hotel">
                     <h3 class="hotel-name">Aparthotel Atenea Valles</h3>
                     <div class="hotel-attributes">
@@ -288,10 +342,12 @@
                     </div>
                 </div>
             </div>
+            <div class="divider"></div>
             <div id="bus-booking">
-                <h4>Autobús</h4>
+                <h3>Servicio de Autobús</h3>
                 <p>Los que os alojéis en uno de estos dos hoteles, dispondréis de un autobús que os llevará desde vuestro alojamiento hasta Can Ribas el <strong>sábado por la mañana</strong> y desde Can Ribas hasta vuestro alojamiento esa <strong>misma noche</strong>, una vez finalizada la celebración. ¡Ya no hay excusa para que termine la fiesta!</p>
                 <p>Si estás interesado/a en utilizar el servicio de autobús, te pedimos que <strong>guardes una plaza</strong> para ti y los tuyos. ¡Gracias!</p>
+                <p class="comment">Nota: Si decides alojarte en otro hotel de Granollers y quieres disfrutar igualmente del servicio de autobús, puedes hacerlo. Solo debes tener en cuenta que la parada de autobús se realizará entre el Hotel Ciutat de Granollers y el Aparthotel Atenea Valles.</p>
                 <div id="book-bus-form-button-wrapper"> 
                     <span 
                         id="book-bus-form-button"
@@ -300,6 +356,17 @@
                         <span>🚌 Guardar plaza</span>
                     </span>
                 </div>
+            </div>
+            <div class="divider"></div>
+            <div id="hotel-alternatives">
+                <p>A continuación, te facilitamos información sobre otras <strong>opciones</strong> de <strong>hoteles</strong> y <strong>casas rurales</strong> de la zona, por si prefieres alojarte en alguna de ellas.</p>
+                <a 
+                    id="hotel-alternatives-button"
+                    class="font-bold py-2 px-4 rounded-full"
+                    target="_blank"
+                    href="https://therapeutic-square-7c0.notion.site/Alojamiento-alternativas-04531132988a4eb5980cbfae506ed983">
+                    <span>Ver otras opciones</span>
+                </a>
             </div>
         </section>
         <!-- <section class="full-screen-section ">

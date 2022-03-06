@@ -7,12 +7,25 @@ body {
   color: #222;
 }
 
+@font-face {
+  font-family: 'daydreamregular';
+  src: url("./../../assets/fonts/daydream.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .font-licorice {
   font-family: 'Licorice', cursive;
 }
 
 .overflow-initial {
   overflow: initial;
+}
+
+.divider {
+  margin: 2rem 0;
+  width: 100%;
+  border-top: 1px dashed #ddd;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,6 +112,7 @@ p + p {
 .full-screen-section #header-title,
 .full-screen-section #header-subtitle,
 .full-screen-section .header-leaf,
+.full-screen-section #home-spot-wrapper,
 .full-screen-section .section-header-bg,
 .full-screen-section .section-header-content,
 .full-screen-section .section-content {
@@ -109,6 +123,7 @@ p + p {
 
 .full-screen-section #header-title,
 .full-screen-section #header-subtitle,
+.full-screen-section #home-spot-wrapper,
 .full-screen-section .section-header-bg,
 .full-screen-section .section-header-content,
 .full-screen-section .section-content {
@@ -118,6 +133,7 @@ p + p {
 
 .full-screen-section.fade #header-title,
 .full-screen-section.fade #header-subtitle,
+.full-screen-section.fade #home-spot-wrapper,
 .full-screen-section.fade .header-leaf,
 .full-screen-section.fade .section-header-bg,
 .full-screen-section.fade .section-header-content,
@@ -127,6 +143,7 @@ p + p {
 
 .full-screen-section.fade #header-title,
 .full-screen-section.fade #header-subtitle,
+.full-screen-section.fade #home-spot-wrapper,
 .full-screen-section.fade .section-header-bg,
 .full-screen-section.fade .section-header-content,
 .full-screen-section.fade .section-content {
@@ -173,11 +190,33 @@ p + p {
 }
 
 #header #header-title {
-  font-size: 70px !important;
+  font-size: 60px !important;
+  font-family: 'daydreamregular', cursive;
+  color: #505050;
 }
 
 #header #header-subtitle {
   text-align: center;
+}
+
+#header #home-spot-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
+}
+
+#header #home-spot-wrapper img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  opacity: 0.15;
 }
 
 #header #leafs-1-wrapper,
@@ -213,6 +252,15 @@ p + p {
 #header #leafs-2 {
   width: 50vw;
   max-width: 220px;
+}
+
+#header #leafs-3 {
+  max-width: 300px;
+}
+
+#header #leafs-1,
+#header #leafs-2,
+#header #leafs-3 {
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
@@ -291,12 +339,14 @@ p + p {
 
 .section-header .section-header-content .section-header-title {
   font-size: 70px !important;
-  -webkit-filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.5));
 }
 
 .section-header .section-header-content .section-header-title.small {
   font-size: 60px !important;
+}
+
+.section-header .section-header-content .section-header-title.compact {
+  line-height: 74px;
 }
 
 .section-header .section-header-bg-wrapper {
@@ -396,6 +446,33 @@ p + p {
   margin: 0 auto;
 }
 
+#time-table {
+  margin-top: 3rem;
+}
+
+#time-table p {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#time-table p > span {
+  font-style: normal;
+}
+
+#time-table table {
+  margin: 0 auto;
+}
+
+#time-table table tr td:first-child {
+  text-align: right;
+  font-weight: bold;
+}
+
+#time-table table tr td:last-child {
+  padding-left: 0.5rem;
+}
+
 #transfer-claim {
   max-width: 100%;
   width: 310px;
@@ -435,6 +512,11 @@ p + p {
 
 #hotels-intro {
   margin-top: 3rem;
+}
+
+#hotels-intro p {
+  text-align: center;
+  font-style: italic;
 }
 
 #hotels-list {
@@ -532,25 +614,14 @@ p + p {
   margin-left: 0.5rem;
 }
 
-#hotels-list .hotel + .hotel {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px dashed #ddd;
-}
-
-#bus-booking {
-  margin-top: 2rem;
-}
-
-#bus-booking h4 {
+#bus-booking h3 {
   text-align: left;
   font-family: inherit;
 }
 
 #bus-booking #book-bus-form-button-wrapper {
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #bus-booking #book-bus-form-button-wrapper #book-bus-form-button {
@@ -567,6 +638,30 @@ p + p {
 }
 
 #bus-booking #book-bus-form-button-wrapper #book-bus-form-button:hover {
+  background-color: #fa79b1;
+}
+
+#hotel-alternatives {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#hotel-alternatives #hotel-alternatives-button {
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fca4ca;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#hotel-alternatives #hotel-alternatives-button:hover {
   background-color: #fa79b1;
 }
 
