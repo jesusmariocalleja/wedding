@@ -643,7 +643,7 @@ p + p {
 
 #hotel-alternatives {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #hotel-alternatives #hotel-alternatives-button {
@@ -663,6 +663,27 @@ p + p {
 
 #hotel-alternatives #hotel-alternatives-button:hover {
   background-color: #fa79b1;
+}
+
+#thanks {
+  margin: 2rem 0;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#thanks img {
+  border-radius: 50%;
+  width: 200px;
+  margin-bottom: 1rem;
 }
 
 @-webkit-keyframes section-header-rotate {

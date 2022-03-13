@@ -575,7 +575,7 @@ p{
 
 #hotel-alternatives{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     #hotel-alternatives-button{
         margin: 0 auto;
@@ -590,6 +590,19 @@ p{
             background-color: #fa79b1;
         }
     
+    }
+}
+
+#thanks{
+    margin: 2rem 0;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        border-radius: 50%;
+        width: 200px;
+        margin-bottom: 1rem;
     }
 }
         
