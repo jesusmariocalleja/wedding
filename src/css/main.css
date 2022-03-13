@@ -76,8 +76,6 @@ p + p {
 
 #wrapper {
   width: 100vw;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
   overflow-y: auto;
 }
 
@@ -106,7 +104,6 @@ p + p {
           justify-content: center;
   max-width: 400px;
   margin: 0 auto;
-  scroll-snap-align: start;
 }
 
 .full-screen-section #header-title,

@@ -76,7 +76,7 @@ p{
 
 #wrapper{
     width: 100vw;
-    scroll-snap-type: y mandatory;
+    //scroll-snap-type: y mandatory;
     overflow-y: auto;
 
     header, section{
@@ -98,7 +98,7 @@ p{
     justify-content: center;
     max-width: 400px;
     margin: 0 auto;
-    scroll-snap-align: start;
+    //scroll-snap-align: start;
 
     //Header
     #header-title,
