@@ -1,4 +1,4 @@
-window.addEventListener("load", scrollTo);
+//window.addEventListener("load", scrollTo);
 window.addEventListener("load", onResize);
 window.addEventListener("load", appearOnScroll);
 window.addEventListener("resize", onResize);
